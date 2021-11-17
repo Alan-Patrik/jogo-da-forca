@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.container .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.container .content {
+  width: 100%;
+}
+
+.container .content .p-dica,
+.p-frase {
+  margin-bottom: 10px;
+}
+
+.container .content #element-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 10px;
+
+  width: 100%;
+  margin: 30px 0 50px 0;
+}
+
+.container .content #element-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+
+  font-weight: bold;
+}
+
+.container div .keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.container div .keyboard .btn-alphabet {
+  background-color: #444444;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  height: 40px;
+  line-height: 40px;
+  margin: 0.25em;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  width: 40px;
+}
+
+.container div .keyboard .btn-alphabet:hover,
+.container div .keyboard .btn-alphabet:focus {
+  background-color: #17171770;
+  cursor: pointer;
+}
+
+.container div .keyboard .btn-alphabet.error {
+  background-color: black;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  height: 40px;
+  line-height: 40px;
+  margin: 0.25em;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+  width: 40px;
+}
+
+.container .content-palavras {
+  display: flex;
+
+  margin-top: 16px;
+}
+
+.container .content-palavras .test {
+  width: 100%;
+}
+
+.container .content-palavras .test .children {
+  display: flex;
+  margin-top: 10px;
+}
+
+.container .message .div-message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container .message .div-message .h2-message,
+.p-message,
+.h4-message {
+  margin-bottom: 10px;
+}
+
+.container .message .div-message .word {
+  margin-top: 30px;
+}
+
+.container .message .div-message .div-message-vencedor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.container .message .div-message .btn-recomecar {
+  width: 100px;
+  height: 30px;
+  margin-top: 60px;
+
+  list-style: none;
+  border-style: none;
+
+  background-color: white;
+  border-radius: 6px;
+}

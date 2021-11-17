@@ -1,0 +1,47 @@
+<section class="container">
+  <h1 class="title">Jogo da forca</h1>
+  <div *ngIf="count < 5">
+    <div class="content">
+      <p class="p-dica"><b>DICA: </b>{{ letterList.dica }}</p>
+      <p class="p-frase"><b>FRASE: </b>{{ letterList.frase }}</p>
+      <p class="p-chance" *ngIf="count < 5"><b>CHANCES: </b>{{ count2 }}</p>
+      <div id="element-list">
+        <span class="item" *ngFor="let letter of newArray"></span>
+      </div>
+    </div>
+    <article class="keyboard">
+      <button
+        class="btn-alphabet"
+        (click)="send(itemAlphabet)"
+        *ngFor="let itemAlphabet of alphabet"
+      >
+        {{ itemAlphabet }}
+      </button>
+    </article>
+    <section class="content-palavras" *ngIf="listOfWords.length !== 0">
+      <div class="test">
+        <h2>Palavras utilizadas...</h2>
+        <article class="children">
+          <div *ngFor="let item of listOfWords">
+            <app-words-used [letter]="item"></app-words-used>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+  <article class="message">
+    <div class="div-message" *ngIf="count >= 5">
+      <h2 class="h2-message">Ah... Infelizmente você perdeu!</h2>
+      <p class="p-message">
+        Você já utilizou suas {{ count }} chances. Mais sorte na proxima vez!
+      </p>
+      <div class="div-message-vencedor">
+        <h4 class="h4-message">A palavra era...</h4>
+        <div class="word">
+          <app-results [word]="newArray"></app-results>
+        </div>
+        <button class="btn-recomecar" (click)="goBack()">recomecar</button>
+      </div>
+    </div>
+  </article>
+</section>
